@@ -2,18 +2,15 @@ using UnityEngine;
 
 public class CoinCollection : MonoBehaviour
 {
-
-    private int Coin = 0;
-    
-    public TextMeshProGUI coinText;
-
-    private void OnTriggerEnter(Collider other)
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        if (other.transform.tag == "Coin")
-        {
-            Coin++
-            coinText.text = "Coin: " + Coin.ToString();    
-            Debug.Log(Coin);
-        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
