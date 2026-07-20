@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class PlayerObserverManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    
+    public static event Action<int> OnCoinCollected;
         
+    public static void NotifyCoinCollected(int currentCoins)
+    {
+        OnCoinCollected?.Invoke(currentCoins);
     }
-
-    // Update is called once per frame
+    
+    
     void Update()
     {
-        
+    
     }
 }
